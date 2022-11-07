@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Student } from 'src/app/models/student.model';
-import { MessageService } from 'src/app/services/message.service';
-import { StudentService } from './body-activity-student/student.service';
 
 @Component({
   selector: 'app-body-activity',
@@ -10,26 +7,13 @@ import { StudentService } from './body-activity-student/student.service';
 })
 export class BodyActivityComponent implements OnInit {
 
-  constructor(private studentService: StudentService, public messageService: MessageService) { }
-
-  insertStudent(student: Student){
-    this.studentService.Students.push({
-      id: this.studentService.id = this.studentService.id + 1,
-      lastName: student.lastName,
-      firstName: student.firstName,
-      age: student.age,
-      city: student.city,
-      faculty: student.faculty,
-      speciality: student.speciality
-    })
-    this.messageService.addMessage('Ajouté !')
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
 /* ------------------- Recuperation des données du formulaire -------------------*/
- /*lastNameFromFrom!: string;
+ lastNameFromFrom!: string;
   firstNameFromForm!: string;
   ageFromForm!: number;
   cityFromForm!: string;
@@ -46,5 +30,5 @@ export class BodyActivityComponent implements OnInit {
 
   receiveFacultyFromForm($event : any){this.facultyFromForm = $event;}
 
-  receiveSpecialityFromForm($event : any){this.specialityFromForm = $event;}*/
+  receiveSpecialityFromForm($event : any){this.specialityFromForm = $event;}
 }

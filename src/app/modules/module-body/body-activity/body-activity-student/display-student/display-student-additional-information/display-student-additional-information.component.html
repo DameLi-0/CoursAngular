@@ -1,6 +1,6 @@
-<div *ngIf="AIactive">
-    <div class="student_info">
-        <h3>Student Additional Information</h3>
+<div *ngIf="AIactive" class="studentAI">
+    <h3>Student Additional Information</h3>
+    <div class="student-info">
         <ul>
             <li>Last Name: {{lastNameInfo}}</li>
             <li>First Name: {{firstNameInfo}}</li>
@@ -8,8 +8,9 @@
             <li>City: {{cityInfo}}</li>
             <li>Faculty: {{facultyInfo}}</li>
             <li>Speciality: {{specialityInfo}}</li>
-            <button class="btnAI" (click)="AIclose()">Close</button>
+            <button (click)="AIclose()">⬆️</button>
         </ul>
+
     </div>
 </div>
-<button class="btnAI" *ngIf="AIactive !== true" (click)="AIopen()">Open</button>
+<button class="btAIopen" *ngIf="AIactive !== true" (click)="AIopen()">⬇️</button>

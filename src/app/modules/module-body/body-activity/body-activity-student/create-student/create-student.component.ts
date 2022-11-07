@@ -1,33 +1,16 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Student } from 'src/app/models/student.model';
 
 @Component({
   selector: 'app-create-student',
   templateUrl: './create-student.component.html',
   styleUrls: ['./create-student.component.scss']
 })
-
 export class CreateStudentComponent implements OnInit {
-speciality: any;
 
-  sendStudentFormToActivity(lastName:string, firstName:string, age:number, city:string, faculty:string, speciality:string){
-    
-    this.sendStudentFormToContainerEvent.emit({
-      lastName: lastName,
-      firstName: firstName,
-      age: age,
-      city: city,
-      faculty: faculty,
-      speciality: speciality
-    })
-    }
+  constructor() { }
 
-  @Output() sendStudentFormToContainerEvent = new EventEmitter<Student>();
-
-    ngOnInit(): void {
-      throw new Error('Method not implemented.');
-    }
- 
+  ngOnInit(): void {
+  }
 
 /* ----------------------------------------RECUPERATION--------------------------------------- */
   lastNameFromFrom!: string;
@@ -49,4 +32,27 @@ speciality: any;
 
   getSpecialityFromForm(speciality : string){this.specialityFromForm = speciality;}
 
+
+
+
+/* ----------------------------------------OUTPUT--------------------------------------- */
+
+  @Output() sendLastNameToMainEvent = new EventEmitter<string>();
+  sendLastNameToMain(){this.sendLastNameToMainEvent.emit(this.lastNameFromFrom);}
+
+  @Output() sendFirstNameToMainEvent = new EventEmitter<string>();
+  sendFirstNameToMain(){this.sendFirstNameToMainEvent.emit(this.firstNameFromForm);}
+
+  @Output() sendAgeToMainEvent = new EventEmitter<number>();
+  sendAgeToMain(){this.sendAgeToMainEvent.emit(this.ageFromForm);}
+
+  @Output() sendCityToMainEvent = new EventEmitter<string>();
+  sendCityToMain(){this.sendCityToMainEvent.emit(this.cityFromForm);}
+
+  @Output() sendFacultyToMainEvent = new EventEmitter<string>();
+  sendFacultyToMain(){this.sendFacultyToMainEvent.emit(this.facultyFromForm);}
+
+  @Output() sendSpecialityToMainEvent = new EventEmitter<string>();
+  sendSpecialityToMain(){this.sendSpecialityToMainEvent.emit(this.specialityFromForm);}
+  
 }

@@ -1,33 +1,16 @@
 .student{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
     border: 1px solid;
     margin-bottom: 1em;
 
-    .studentUl{
-        margin: 0;
-        padding: 20px 0px;
+    ul{
         list-style: none;
-        text-align: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
     }
 
-    li{
-        margin-bottom: 10px;
-    }
-
-    .delete{
+    .delete, .additional_information{
         cursor: pointer;
-        background-color: black;
-        color: white;
-        padding: 7px 15px;
-        border-radius: 15px;
-        border: 1px solid black;      
-    }
-
-    .delete:hover{
-        background-color: white;
-        color: black;
     }
 }

@@ -26,7 +26,7 @@ ngOnChanges(): void {
   this.students.push({lastName: this.lastNameFromMain, firstName: this.firstNameFromMain, age: this.ageFromMain, city: this.cityFromMain, faculty: this.facultyFromMain, speciality: this.specialityFromMain})
 }
 
-
+/* ------------------- INFORMATION COMPLEMENTAIRE -------------------*/
 infoStudent!: Student;
 lastNameInfoStudent!: any;
 firstNameInfoStudent!: any;
@@ -50,6 +50,12 @@ getInfos(studentLastName : any)
   this.specialityInfoStudent = this.infoStudent['speciality'];   
   this.AIactive = true;
 }
-
+/* ------------------- SUPPRIMER ETUDIANT -------------------*/
 deleteStudent($event : any){this.students = this.students.filter(student => student.lastName !== $event)}
+
+/* -------------------  -------------------*/
+
+getModif(studentLastName : any){
+  
+}
 }
