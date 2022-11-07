@@ -1,0 +1,40 @@
+<div class="activity-create">
+
+    <h3>Add Student</h3>
+    
+    <input type="text" placeholder="Last Name" #lastName (change)="getLastNameFromForm(lastName.value)">
+
+    <input type="text" placeholder="First Name" #firstName (change)="getFirstNameFromForm(firstName.value)">
+
+    <input type="number" placeholder="Age" #age (change)="getAgeFromForm(age.valueAsNumber)">
+
+    <input type="text" placeholder="City" #city (change)="getCityFromForm(city.value)">
+
+    <select #faculty (change)="getFacultyFromForm(faculty.value)">
+        <option value="" selected disabled>Select your faculty</option>
+        <option value="informatique">Informatique</option>
+        <option value="cuisine">Cuisine</option>
+        <option value="medecine">Médecine</option>
+    </select>
+
+    <select *ngIf="facultyFromForm === 'informatique'" #speciality (change)="getSpecialityFromForm(speciality.value)">
+        <option value="" selected disabled>Select your speciality of informatique</option>
+        <option value="developpement">Développement</option>
+        <option value="cybersecurite">Cybersécurité</option>
+    </select>
+
+    <select *ngIf="facultyFromForm === 'cuisine'" #speciality (change)="getSpecialityFromForm(speciality.value)">
+        <option value="" selected disabled>Select your speciality of cuisine</option>
+        <option value="service">Service</option>
+        <option value="cuisinier">Cuisinier</option>
+    </select>
+
+    <select *ngIf="facultyFromForm === 'medecine'" #speciality (change)="getSpecialityFromForm(speciality.value)">
+        <option value="" selected disabled>Select your medical specialty</option>
+        <option value="infirmiere">Infirmiere</option>
+        <option value="pédiatre ">Pédiatre </option>
+    </select>
+
+    <button class="add" (click)="sendStudentFormToActivity(lastName.value, firstName.value, age.valueAsNumber, city.value, faculty.value, speciality.value)">Add</button>
+
+</div>

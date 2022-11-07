@@ -1,0 +1,12 @@
+<div class="studentList">
+    <h3>Student List</h3>
+
+    <div class="student" *ngFor="let student of students" (click)="getInfos(student.lastName)">
+        <ul class="studentUl">
+            <li>Name: {{student.lastName}}</li>
+            <li>Age: {{student.age}}</li>
+            <li class="delete" (click)="deleteStudent(student.lastName)">Delete</li>
+        </ul>
+        <app-display-student-additional-information *ngIf="lastNameInfoStudent" [lastNameInfo]="lastNameInfoStudent" [firstNameInfo]="firstNameInfoStudent" [ageInfo]="ageInfoStudent" [cityInfo]="cityInfoStudent" [facultyInfo]="facultyInfoStudent" [specialityInfo]="specialityInfoStudent" [AIactive]="AIactive"></app-display-student-additional-information>
+    </div>
+</div>
