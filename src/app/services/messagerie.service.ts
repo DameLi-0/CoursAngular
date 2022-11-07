@@ -16,7 +16,6 @@ export class MessagerieService {
     detail: 'detailTEST'
   }];
 
-
   addMessage(message: Message){
     this.messages.push(message);
   }

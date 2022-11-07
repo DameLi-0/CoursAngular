@@ -16,6 +16,7 @@ export class MessagerieDisplayerComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    
   }
 
 }
