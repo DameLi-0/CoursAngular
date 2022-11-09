@@ -17,6 +17,7 @@ speciality: any;
 /* ----------------------------------------OUTPUT--------------------------------------- */
 
   @Output() sendStudentToMainEvent = new EventEmitter<Student>();
+  
   sendStudentToMain(lastName: string, firstName: string, age: number, city: string, faculty: string, speciality: string){this.sendStudentToMainEvent.emit({
       lastName: lastName,
       firstName: firstName,

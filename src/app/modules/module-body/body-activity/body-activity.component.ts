@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Student } from 'src/app/models/student.model';
+import { MessagerieService } from 'src/app/services/messagerie.service';
 import { StudentService } from '../../../services/student.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { StudentService } from '../../../services/student.service';
 })
 export class BodyActivityComponent implements OnInit {
 
-  constructor(private studentService: StudentService) { }
+  constructor(private studentService: StudentService, public messagerieService: MessagerieService) { }
 
   ngOnInit(): void {
   }
@@ -22,7 +23,9 @@ export class BodyActivityComponent implements OnInit {
     city: student.city,
     faculty: student.faculty,
     speciality: student.speciality
-  })}
+  }) 
+  this.messagerieService.addMessage()
+}
 
   // lastNameFromFrom!: string;
   // firstNameFromForm!: string;

@@ -9,13 +9,10 @@ import { StudentService } from 'src/app/services/student.service';
 })
 export class DisplayStudentComponent implements OnInit {
   Students: Student[] | undefined;
-  
+
   constructor(private studentService: StudentService) { }
 
   ngOnInit(): void {
     this.Students = this.studentService.getStudents();
   }
-  
-
-
 }
