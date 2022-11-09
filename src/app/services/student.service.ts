@@ -22,6 +22,13 @@ export class StudentService {
         return this.student;
     }
 
+    addStudent(student :Student) {
+        this.student.push(student);
+    }
+
+
+    
+
     constructor() { }
     
 }

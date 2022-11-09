@@ -16,10 +16,10 @@ export class MessagerieService {
     detail: 'detailTEST'
   }];
 
-  addMessage(message: Message){
-    this.messages.push(message);
+  addMessage(messages: Message){
+    this.messages.push(messages);
 
-    setTimeout(() => { this.messages}, 5000);
+    setTimeout(() => {this.messages}, 5000);
   }
 
   clearMessages(){

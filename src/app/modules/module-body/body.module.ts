@@ -14,7 +14,8 @@ import { CreateStudentComponent } from './body-activity/body-activity-student/cr
     BodyActivityComponent,
     DisplayStudentComponent,
     DisplayStudentAdditionalInformationComponent,
-    CreateStudentComponent
+    CreateStudentComponent,
+    
   ],
     providers: [],
 })
