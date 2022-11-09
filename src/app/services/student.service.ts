@@ -22,9 +22,15 @@ export class StudentService {
         return this.student;
     }
 
+    //getStudentById
+
     addStudent(student :Student) {
         this.student.push(student);
     }
+
+    //deleteStudent
+
+    
 
 
     
