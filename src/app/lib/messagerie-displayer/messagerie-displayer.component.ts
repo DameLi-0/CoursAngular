@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Message } from 'src/app/models/message.model';
-import { MessagerieService } from '../services/messagerie.service';
+import { MessagerieService } from '../../services/messagerie.service';
 
 @Component({
   selector: 'app-messagerie-displayer',
@@ -9,10 +9,10 @@ import { MessagerieService } from '../services/messagerie.service';
 })
 
 export class MessagerieDisplayerComponent implements OnInit {
-  messageFromMessagerieService: Message[] = []; 
+  messageFromMessagerieService: Message[]; 
 
-  constructor(private readonly MessagerieService: MessagerieService) { 
-    this.messageFromMessagerieService = this.MessagerieService.readAllMessages();
+  constructor(private messagerieService: MessagerieService) { 
+    this.messageFromMessagerieService = this.messagerieService.getMessages();
   }
 
   ngOnInit(): void {

@@ -9,7 +9,7 @@ export class MessagerieService {
 
   constructor() { }
 
-  public messages: Message[] = 
+  private messages: Message[] = 
   [{
     id: 1,
     titre: 'TitreTEST',
@@ -18,11 +18,21 @@ export class MessagerieService {
 
   addMessage(message: Message){
     this.messages.push(message);
+
+    setTimeout(() => { this.messages}, 5000);
   }
 
-  readAllMessages(){
+  clearMessages(){
+    this.messages = [];
+  }
+
+  /*setMessages(messages: Message[]){
+    this.messages = messages;
+  }*/
+
+  getMessages(){
     return this.messages;
   }
 
-
+  
 }

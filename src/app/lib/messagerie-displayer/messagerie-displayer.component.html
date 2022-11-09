@@ -1,6 +1,6 @@
 <div class="messageList">
 
     <div class="message" *ngFor="let message of messageFromMessagerieService">
-        <!-- simpleDisplayer -->
+        <app-message-simple-displayer [message]="message"></app-message-simple-displayer>
     </div>
 </div>

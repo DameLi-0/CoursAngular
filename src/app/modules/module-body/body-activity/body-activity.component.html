@@ -1,2 +1,2 @@
-<app-create-student (sendLastNameToMainEvent)="receiveLastNameFromForm($event)" (sendFirstNameToMainEvent)="receiveFirstNameFromForm($event)" (sendAgeToMainEvent)="receiveAgeFromForm($event)" (sendCityToMainEvent)="receiveCityFromForm($event)" (sendFacultyToMainEvent)="receiveFacultyFromForm($event)" (sendSpecialityToMainEvent)="receiveSpecialityFromForm($event)"></app-create-student>
-<app-display-student *ngIf="lastNameFromFrom" [lastNameFromMain]="lastNameFromFrom" [firstNameFromMain]="firstNameFromForm" [ageFromMain]="ageFromForm" [cityFromMain]="cityFromForm" [facultyFromMain]="facultyFromForm" [specialityFromMain]="specialityFromForm"></app-display-student>
+<app-create-student (sendStudentToMainEvent)="addStudent($event)" ></app-create-student>
+<app-display-student></app-display-student>

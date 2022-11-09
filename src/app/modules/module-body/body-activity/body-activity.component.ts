@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Student } from 'src/app/models/student.model';
+import { StudentService } from '../../../services/student.service';
 
 @Component({
   selector: 'app-body-activity',
@@ -7,28 +9,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BodyActivityComponent implements OnInit {
 
-  constructor() { }
+  constructor(private studentService: StudentService) { }
 
   ngOnInit(): void {
   }
 
-/* ------------------- Recuperation des données du formulaire -------------------*/
- lastNameFromFrom!: string;
-  firstNameFromForm!: string;
-  ageFromForm!: number;
-  cityFromForm!: string;
-  facultyFromForm!: string;
-  specialityFromForm!: string;
 
-  receiveLastNameFromForm($event : any){this.lastNameFromFrom = $event;}
+  addStudent(student: Student){this.studentService.student.push({
+    lastName: student.lastName,
+    firstName: student.firstName,
+    age: student.age,
+    city: student.city,
+    faculty: student.faculty,
+    speciality: student.speciality
+  })}
 
-  receiveFirstNameFromForm($event : any){this.firstNameFromForm = $event;}
+  // lastNameFromFrom!: string;
+  // firstNameFromForm!: string;
+  // ageFromForm!: number;
+  // cityFromForm!: string;
+  // facultyFromForm!: string;
+  // specialityFromForm!: string;
 
-  receiveAgeFromForm($event : any){this.ageFromForm = $event;}
+  // receiveLastNameFromForm($event : any){this.lastNameFromFrom = $event;}
 
-  receiveCityFromForm($event : any){this.cityFromForm = $event;}
+  // receiveFirstNameFromForm($event : any){this.firstNameFromForm = $event;}
 
-  receiveFacultyFromForm($event : any){this.facultyFromForm = $event;}
+  // receiveAgeFromForm($event : any){this.ageFromForm = $event;}
 
-  receiveSpecialityFromForm($event : any){this.specialityFromForm = $event;}
+  // receiveCityFromForm($event : any){this.cityFromForm = $event;}
+
+  // receiveFacultyFromForm($event : any){this.facultyFromForm = $event;}
+
+  // receiveSpecialityFromForm($event : any){this.specialityFromForm = $event;}
+
+  
 }

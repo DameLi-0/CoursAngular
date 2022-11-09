@@ -29,6 +29,7 @@
         <option value="cuisinier">Cuisinier</option>
     </select>
 
-    <button (click)="sendLastNameToMain() ; sendFirstNameToMain() ; sendAgeToMain() ; sendCityToMain() ; sendFacultyToMain() ; sendSpecialityToMain()">Add</button>
+    <!-- <button (click)="sendLastNameToMain() ; sendFirstNameToMain() ; sendAgeToMain() ; sendCityToMain() ; sendFacultyToMain() ; sendSpecialityToMain()">Add</button> -->
+    <button (click)="sendStudentToMain(lastName.value, firstName.value, age.valueAsNumber, city.value, faculty.value, speciality.value)">Add</button>
 
 </div>

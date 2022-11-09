@@ -2,8 +2,8 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BodyActivityComponent } from './body-activity/body-activity.component';
 import { DisplayStudentComponent } from './body-activity/body-activity-student/display-student/display-student.component';
-import { CreateStudentComponent } from './body-activity/body-activity-student/create-student/create-student.component';
 import { DisplayStudentAdditionalInformationComponent } from './body-activity/body-activity-student/display-student/display-student-additional-information/display-student-additional-information.component';
+import { CreateStudentComponent } from './body-activity/body-activity-student/create-student-form/create-student.component';
 
 
 
@@ -13,8 +13,8 @@ import { DisplayStudentAdditionalInformationComponent } from './body-activity/bo
     declarations: [
     BodyActivityComponent,
     DisplayStudentComponent,
-    CreateStudentComponent,
-    DisplayStudentAdditionalInformationComponent
+    DisplayStudentAdditionalInformationComponent,
+    CreateStudentComponent
   ],
     providers: [],
 })
